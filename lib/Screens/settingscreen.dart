@@ -8,6 +8,15 @@ class SettingScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Settings"),
       ),
+      body: const Column(
+        //mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "Coming Soon!!!!",
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
     );
   }
 }

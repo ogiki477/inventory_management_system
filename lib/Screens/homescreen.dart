@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("HomePage"),
       ),
+      body: const Text("Coming Soon!!!!"),
     );
   }
 }

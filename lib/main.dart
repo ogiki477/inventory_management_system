@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inventory_management_system/Screens/homescreen.dart';
 
 void main() {
   runApp(
@@ -8,7 +9,10 @@ void main() {
         title: const Text("HomePage"),
         backgroundColor: Colors.green,
         elevation: 20,
+      
       ),
+      body: const HomeScreen(),
+
       ),
     ),
   );

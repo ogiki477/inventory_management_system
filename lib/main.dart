@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:inventory_management_system/starterpage.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
-  runApp(MyApp());
+void main() async {
+  await dotenv.load(fileName: '.env');
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   build(context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StarterPage(),
+      home: StarterPage('${dotenv.env['APP_NAME']}'),
     );
   }
 }

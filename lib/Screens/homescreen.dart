@@ -7,6 +7,8 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("HomePage"),
+        backgroundColor: const Color.fromARGB(255, 205, 209, 205),
+        elevation: 20,
       ),
       body: const Text("Coming Soon!!!!"),
     );

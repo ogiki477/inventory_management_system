@@ -4,7 +4,8 @@ import 'package:inventory_management_system/Screens/inventoryscreen.dart';
 import 'package:inventory_management_system/Screens/settingscreen.dart';
 
 class StarterPage extends StatefulWidget {
-  const StarterPage({super.key});
+  StarterPage(this.title, {super.key});
+  String title;
   @override
   State<StarterPage> createState() {
     return _StarterPageState();
@@ -24,14 +25,22 @@ class _StarterPageState extends State<StarterPage> {
   build(context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Inventory System",
-          style: TextStyle(
+        title: Text(
+          widget.title,
+          style: const TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.bold,
             //fontStyle: FontStyle.italic,
           ),
         ),
+        // const Text(
+        //   "Inventory System",
+        //   style: TextStyle(
+        //     fontSize: 28,
+        //     fontWeight: FontWeight.bold,
+        //     //fontStyle: FontStyle.italic,
+        //   ),
+        // ),
         backgroundColor: Colors.green,
         elevation: 20,
       ),

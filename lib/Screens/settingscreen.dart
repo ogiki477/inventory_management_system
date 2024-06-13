@@ -7,6 +7,8 @@ class SettingScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Settings"),
+        backgroundColor: const Color.fromARGB(255, 205, 209, 205),
+        elevation: 20,
       ),
       body: const Column(
         //mainAxisAlignment: MainAxisAlignment.center,

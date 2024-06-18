@@ -30,17 +30,8 @@ class _StarterPageState extends State<StarterPage> {
           style: const TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.bold,
-            //fontStyle: FontStyle.italic,
           ),
         ),
-        // const Text(
-        //   "Inventory System",
-        //   style: TextStyle(
-        //     fontSize: 28,
-        //     fontWeight: FontWeight.bold,
-        //     //fontStyle: FontStyle.italic,
-        //   ),
-        // ),
         backgroundColor: Colors.green,
         elevation: 20,
       ),

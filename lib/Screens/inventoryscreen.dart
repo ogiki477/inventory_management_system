@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:inventory_management_system/Screens/homescreen.dart';
+import 'package:inventory_management_system/Screens/DetailScreens/clothingscreen.dart';
+import 'package:inventory_management_system/Screens/DetailScreens/electronicscreen.dart';
+import 'package:inventory_management_system/Screens/DetailScreens/groceryscreen.dart';
+import 'package:inventory_management_system/Screens/DetailScreens/homeappliancescreen.dart';
 
 class InventoryScreen extends StatelessWidget {
   const InventoryScreen({super.key});
@@ -15,6 +18,10 @@ class InventoryScreen extends StatelessWidget {
         //color: Colors.green,
         child: ListView(
           children: [
+            const SizedBox(
+              height: 20,
+            ),
+            const Divider(),
             ListTile(
               title: const Text(
                 "Electronics",
@@ -36,7 +43,9 @@ class InventoryScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  MaterialPageRoute(
+                    builder: (context) => const ElectronicScreen(),
+                  ),
                 );
               },
             ),
@@ -58,12 +67,13 @@ class InventoryScreen extends StatelessWidget {
                 ),
               ),
               leading: const Icon(Icons.local_grocery_store),
-              trailing: const Icon(
-                Icons.chevron_right,
-                color: Colors.blue,
-              ),
+              trailing: const Icon(Icons.chevron_right),
               onTap: () {
-                Navigator.pushNamed(context, '/homepage');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const GroceryScreen()),
+                );
               },
             ),
             const Divider(),
@@ -87,38 +97,74 @@ class InventoryScreen extends StatelessWidget {
               trailing: const Icon(Icons.chevron_right),
               onTap: () {
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HomeScreen()),
-                );
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const HomeApplianceScreen()));
               },
             ),
-            Divider(),
+            const Divider(),
             ListTile(
               title: const Text(
-                "Office Supplies",
+                "Clothing",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.blue,
                     fontSize: 28),
               ),
               subtitle: const Text(
-                "Comprises of items commonly used in offices",
+                "Comprises of apparel items",
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
                   color: Colors.black,
                   fontSize: 18,
                 ),
               ),
-              leading: const Icon(Icons.local_post_office),
-              trailing: const Icon(
-                Icons.chevron_right,
-                color: Colors.blue,
-              ),
+              leading: const Icon(Icons.collections_sharp),
+              trailing: const Icon(Icons.chevron_right),
               onTap: () {
-                Navigator.pushNamed(context, '/homepage');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ClothingScreen()),
+                );
               },
             ),
             const Divider(),
+            Container(
+              padding: EdgeInsets.all(10),
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue[100],
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/home');
+                  },
+                  child: const Text(
+                    "Go to HomePage",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                    ),
+                  )),
+            ),
+            const Divider(),
+            Container(
+              padding: EdgeInsets.all(10),
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green[100],
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/welcome');
+                  },
+                  child: const Text(
+                    "Go to Welcome Page",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                    ),
+                  )),
+            ),
           ],
         ),
       ),

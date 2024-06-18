@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inventory_management_system/Screens/homescreen.dart';
 
 class InventoryScreen extends StatelessWidget {
   const InventoryScreen({super.key});
@@ -13,16 +14,16 @@ class InventoryScreen extends StatelessWidget {
         width: 350,
         //color: Colors.green,
         child: ListView(
-          children: const [
+          children: [
             ListTile(
-              title: Text(
+              title: const Text(
                 "Electronics",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.blue,
                     fontSize: 28),
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 "Comprises of electronic items",
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
@@ -30,18 +31,25 @@ class InventoryScreen extends StatelessWidget {
                   fontSize: 18,
                 ),
               ),
-              leading: Icon(Icons.electric_rickshaw),
+              leading: const Icon(Icons.electric_rickshaw),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                );
+              },
             ),
-            Divider(),
+            const Divider(),
             ListTile(
-              title: Text(
+              title: const Text(
                 "Groceries",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.blue,
                     fontSize: 28),
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 "Comprises of household food stuff",
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
@@ -49,18 +57,25 @@ class InventoryScreen extends StatelessWidget {
                   fontSize: 18,
                 ),
               ),
-              leading: Icon(Icons.local_grocery_store),
+              leading: const Icon(Icons.local_grocery_store),
+              trailing: const Icon(
+                Icons.chevron_right,
+                color: Colors.blue,
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/homepage');
+              },
             ),
-            Divider(),
+            const Divider(),
             ListTile(
-              title: Text(
+              title: const Text(
                 "Home Appliances",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.blue,
                     fontSize: 28),
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 "Comprises of household appliances",
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
@@ -68,18 +83,25 @@ class InventoryScreen extends StatelessWidget {
                   fontSize: 18,
                 ),
               ),
-              leading: Icon(Icons.fire_extinguisher_rounded),
+              leading: const Icon(Icons.fire_extinguisher_rounded),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                );
+              },
             ),
             Divider(),
             ListTile(
-              title: Text(
+              title: const Text(
                 "Office Supplies",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.blue,
                     fontSize: 28),
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 "Comprises of items commonly used in offices",
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
@@ -87,46 +109,16 @@ class InventoryScreen extends StatelessWidget {
                   fontSize: 18,
                 ),
               ),
-              leading: Icon(Icons.local_post_office),
+              leading: const Icon(Icons.local_post_office),
+              trailing: const Icon(
+                Icons.chevron_right,
+                color: Colors.blue,
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/homepage');
+              },
             ),
-            Divider(),
-            ListTile(
-              title: Text(
-                "Clothing",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue,
-                    fontSize: 28),
-              ),
-              subtitle: Text(
-                "Comprises of apparel items",
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  color: Colors.black,
-                  fontSize: 18,
-                ),
-              ),
-              leading: Icon(Icons.collections_sharp),
-            ),
-            Divider(),
-            ListTile(
-              title: Text(
-                "Toys",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue,
-                    fontSize: 28),
-              ),
-              subtitle: Text(
-                "Comprises of games",
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  color: Colors.black,
-                  fontSize: 18,
-                ),
-              ),
-              leading: Icon(Icons.toys),
-            ),
+            const Divider(),
           ],
         ),
       ),

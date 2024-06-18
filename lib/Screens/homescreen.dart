@@ -10,7 +10,13 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 205, 209, 205),
         elevation: 20,
       ),
-      body: const Text("Coming Soon!!!!"),
+      body: Container(
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [
+          Colors.green,
+          Colors.yellow,
+        ])),
+      ),
     );
   }
 }

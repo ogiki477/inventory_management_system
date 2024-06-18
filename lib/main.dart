@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inventory_management_system/Screens/homescreen.dart';
 import 'package:inventory_management_system/starterpage.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: StarterPage('${dotenv.env['APP_NAME']}'),
+      routes: {
+        '/homepage': (context) => const HomeScreen(),
+      },
     );
   }
 }

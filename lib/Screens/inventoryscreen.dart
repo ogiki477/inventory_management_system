@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:inventory_management_system/Screens/DetailScreens/clothingscreen.dart';
 import 'package:inventory_management_system/Screens/DetailScreens/electronicscreen.dart';
 import 'package:inventory_management_system/Screens/DetailScreens/groceryscreen.dart';
 import 'package:inventory_management_system/Screens/DetailScreens/homeappliancescreen.dart';
 
-class InventoryScreen extends StatelessWidget {
+class InventoryScreen extends StatefulWidget {
   const InventoryScreen({super.key});
+
+  @override
+  State<InventoryScreen> createState() => _InventoryScreenState();
+}
+
+class _InventoryScreenState extends State<InventoryScreen> {
   @override
   build(context) {
     return Scaffold(
@@ -18,9 +25,6 @@ class InventoryScreen extends StatelessWidget {
         //color: Colors.green,
         child: ListView(
           children: [
-            const SizedBox(
-              height: 20,
-            ),
             const Divider(),
             ListTile(
               title: const Text(
@@ -140,7 +144,7 @@ class InventoryScreen extends StatelessWidget {
                     Navigator.pushNamed(context, '/home');
                   },
                   child: const Text(
-                    "Go to HomePage",
+                    "Add more Items",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,

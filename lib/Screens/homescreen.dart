@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:inventory_management_system/Screens/counterscreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   @override
   build(context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text("HomePage"),
-      //   backgroundColor: const Color.fromARGB(255, 205, 209, 205),
-      //   elevation: 20,
-      // ),
+      appBar: AppBar(
+        title: const Text("HomePage"),
+        backgroundColor: const Color.fromARGB(255, 205, 209, 205),
+        elevation: 20,
+      ),
       body: Column(
         children: [
           const Card(
@@ -53,6 +54,22 @@ class HomeScreen extends StatelessWidget {
                       ),
                     )),
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  FloatingActionButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CounterScreen()),
+                      );
+                    },
+                    backgroundColor: Colors.blue,
+                    child: Text("Counter"),
+                  ),
+                ],
+              )
             ],
           ),
         ],

@@ -11,7 +11,7 @@ class CounterScreen extends StatelessWidget {
     final count = counter.count;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Conter Page"),
+        title: const Text("Counter Page"),
         backgroundColor: Colors.green,
         elevation: 20,
       ),

@@ -16,11 +16,10 @@ class StarterPage extends StatefulWidget {
 class _StarterPageState extends State<StarterPage> {
   int _currentIndex = 0;
 
-  List<Widget> screens = const [
+  List<Widget> screens = [
     HomeScreen(),
     InventoryScreen(),
     SettingScreen(),
-    CounterScreen(),
   ];
 
   @override

@@ -16,7 +16,7 @@ class GroceryScreen extends StatelessWidget {
         backgroundColor: Colors.green,
         elevation: 20,
       ),
-      body: Column(
+      body: ListView(
         children: [
           Container(
             padding: EdgeInsets.all(10),

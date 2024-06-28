@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inventory_management_system/Screens/formscreen.dart';
-import 'package:inventory_management_system/Screens/homescreen.dart';
+// import 'package:inventory_management_system/Screens/homescreen.dart';
 import 'package:inventory_management_system/Screens/inventoryscreen.dart';
 import 'package:inventory_management_system/Screens/starterpage.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';

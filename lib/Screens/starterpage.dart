@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inventory_management_system/Screens/counterscreen.dart';
+// import 'package:inventory_management_system/Screens/counterscreen.dart';
 import 'package:inventory_management_system/Screens/homescreen.dart';
 import 'package:inventory_management_system/Screens/inventoryscreen.dart';
 import 'package:inventory_management_system/Screens/settingscreen.dart';
